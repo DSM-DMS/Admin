@@ -1,0 +1,14 @@
+C:\Users\user\source\repos\DMS\DMS\bin\Debug\DMS.exe.config
+C:\Users\user\source\repos\DMS\DMS\bin\Debug\DMS.exe
+C:\Users\user\source\repos\DMS\DMS\bin\Debug\DMS.pdb
+C:\Users\user\source\repos\DMS\DMS\obj\Debug\DMS.csprojAssemblyReference.cache
+C:\Users\user\source\repos\DMS\DMS\obj\Debug\MainWindow.g.cs
+C:\Users\user\source\repos\DMS\DMS\obj\Debug\App.g.cs
+C:\Users\user\source\repos\DMS\DMS\obj\Debug\DMS_MarkupCompile.cache
+C:\Users\user\source\repos\DMS\DMS\obj\Debug\DMS_MarkupCompile.lref
+C:\Users\user\source\repos\DMS\DMS\obj\Debug\MainWindow.baml
+C:\Users\user\source\repos\DMS\DMS\obj\Debug\DMS.g.resources
+C:\Users\user\source\repos\DMS\DMS\obj\Debug\DMS.Properties.Resources.resources
+C:\Users\user\source\repos\DMS\DMS\obj\Debug\DMS.csproj.GenerateResource.cache
+C:\Users\user\source\repos\DMS\DMS\obj\Debug\DMS.exe
+C:\Users\user\source\repos\DMS\DMS\obj\Debug\DMS.pdb
