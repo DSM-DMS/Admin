@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DMS"
         mc:Ignorable="d"
-        Title="MainWindow" Height="1065" Width="1920" WindowState="Maximized" WindowStartupLocation="CenterOwner">
+        Title="MainWindow" Height="1080" Width="1920" WindowState="Maximized">
 
     <Window.Resources>
         <Color x:Key="SelectedUnfocusedColor">#FFDDDDDD</Color>
@@ -121,13 +121,6 @@
     </Window.Resources>
 
     <Grid Background="#FFF7F8FA">
-        <Border BorderThickness="1" HorizontalAlignment="Left" Height="94" Margin="0,0,-0.4,0" VerticalAlignment="Top" Width="1914" Background="White">
-            <Border.Effect>
-                <DropShadowEffect BlurRadius="6" Direction="-3" ShadowDepth="6" RenderingBias="Quality"/>
-            </Border.Effect>
-        </Border>
-
-        <DockPanel HorizontalAlignment="Left" LastChildFill="False" Width="210" Background="#FF2F5FD2" Margin="0,0,0,0.4"/>
         <Button x:Name="point_Button" HorizontalAlignment="Left" Margin="25,118,0,0" VerticalAlignment="Top" Width="160" Height="48" Click="point_click" Foreground="{x:Null}" Selector.IsSelected="False">
 
             <Button.Resources>
@@ -267,35 +260,6 @@
             </Button.Background>
 
         </Button>
-        <Border BorderThickness="1" HorizontalAlignment="Left" Height="80" Margin="0,102,0,0" VerticalAlignment="Top" Width="210" Background="#7FFFFFFF" x:Name="mark_Border"/>
-
-        <TextBox HorizontalAlignment="Left" Height="32" TextWrapping="Wrap" VerticalAlignment="Top" Width="182" Margin="315,32,0,0" FontFamily="Noto Sans CJK KR" FontSize="22" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" Background="{x:Null}" Foreground="Black" Name="search_TextBox" PreviewMouseDown="textbox1_MouseDown" Text="학번 또는 이름 입력" BorderThickness="0"/>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="825" Margin="240,194,0,0" VerticalAlignment="Top" Width="816" Background="White" CornerRadius="16">
-
-            <ListView x:Name="SearchList_Copy"
-                Background="#ffffff"
-                Margin="9.2,9.2,9.2,74"
-                SelectionMode="Multiple"
-                VerticalAlignment="Stretch"
-                TextElement.FontSize="30">
-                <ListView.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="BorderThickness" Value="1" />
-                        <Setter Property="CornerRadius" Value="9. 9, 0, 0" />
-                    </Style>
-                </ListView.Resources>
-                <ListView.View>
-                    <GridView AllowsColumnReorder="True">
-                        <GridViewColumn Header="학번" DisplayMemberBinding="{Binding ClassNumber}" Width="164"/>
-                        <GridViewColumn Header="이름" DisplayMemberBinding="{Binding Name}"  Width="164"/>
-                        <GridViewColumn Header="상점" DisplayMemberBinding="{Binding GoodPoint}" Width="164"/>
-                        <GridViewColumn Header="벌점" DisplayMemberBinding="{Binding BadPoint}" Width="164"/>
-                        <GridViewColumn Header="단계" DisplayMemberBinding="{Binding PenaltyLevel}"  Width="164"/>
-
-                    </GridView>
-                </ListView.View>
-            </ListView>
-        </Border>
         <Button Content="전체 선택" HorizontalAlignment="Left" Height="44" Margin="795,959,0,0" VerticalAlignment="Top" Width="120" Foreground="#FF404040" Name="All_Select_Button" FontSize="20" BorderBrush="#FFB4B4B4" Background="White" Click="All_Grade_Click" FontFamily="NanumSquare" FontWeight="Bold">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
@@ -310,119 +274,6 @@
                 </Style>
             </Button.Resources>
         </Button>
-        <Image HorizontalAlignment="Left" Height="44.55" Margin="240,25,0,0" VerticalAlignment="Top" Width="44.55" Source="Resources/search.png"/>
-        <Border BorderThickness="1" HorizontalAlignment="Left" Height="55" Margin="240,118,0,0" VerticalAlignment="Top" Width="816" Background="#FF2F5FD2" CornerRadius="16,16,16,16"/>
-        <Button Content="전체" HorizontalAlignment="Left" Height="47" Margin="244,122,0,0" VerticalAlignment="Top" Width="181" Foreground="#FF2F5FD2" Name="All_Grade_Button" FontSize="16" BorderBrush="{x:Null}" Background="White" Click="All_Grade_Click">
-            <Button.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="16"/>
-                </Style>
-            </Button.Resources>
-        </Button>
-        <Button Content="1학년" HorizontalAlignment="Left" Height="47" Margin="453,122,0,0" VerticalAlignment="Top" Width="181" Foreground="White" Name="First_Grade_Button" FontSize="16" Background="#FF2F5FD2" Click="First_Grade_Click" BorderBrush="{x:Null}">
-            <Button.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="16"/>
-                </Style>
-            </Button.Resources>
-        </Button>
-        <Button Content="2학년" HorizontalAlignment="Left" Height="47" Margin="662,122,0,0" VerticalAlignment="Top" Width="181" Foreground="White" x:Name="Second_Grade_Button" FontSize="16" Background="#FF2F5FD2" Click="Second_Grade_Click" BorderBrush="{x:Null}">
-            <Button.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="16"/>
-                </Style>
-            </Button.Resources>
-        </Button>
-        <Button Content="3학년" HorizontalAlignment="Left" Height="47" Margin="871,122,0,0" VerticalAlignment="Top" Width="181" Foreground="White" x:Name="Third_Grade_Button" FontSize="16" Background="#FF2F5FD2" BorderBrush="{x:Null}" Click="Third_Grade_Click">
-            <Button.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="16"/>
-                </Style>
-            </Button.Resources>
-        </Button>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="460" Margin="1074,118,0,0" VerticalAlignment="Top" Width="399" Background="White" CornerRadius="16">
-
-            <ListView x:Name="SearchList_Copy2"
-                Background="#ffffff"
-                Margin="9.2,9.2,9.4,9.2"
-                SelectionMode="Multiple"
-                VerticalAlignment="Stretch"
-                TextElement.FontSize="30">
-                <ListView.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="BorderThickness" Value="1" />
-                        <Setter Property="CornerRadius" Value="9. 9, 0, 0" />
-                    </Style>
-                </ListView.Resources>
-                <ListView.View>
-                    <GridView AllowsColumnReorder="True">
-                        <GridViewColumn Header="학번" DisplayMemberBinding="{Binding ClassNumber}" Width="164"/>
-                        <GridViewColumn Header="이름" DisplayMemberBinding="{Binding Name}"  Width="164"/>
-                        <GridViewColumn Header="삭제" DisplayMemberBinding="{Binding GoodPoint}" Width="164"/>
-                    </GridView>
-                </ListView.View>
-            </ListView>
-        </Border>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="423" Margin="1074,596,0,0" VerticalAlignment="Top" Width="399" Background="White" CornerRadius="16">
-
-            <ListView x:Name="SearchList_Copy1"
-                Background="#ffffff"
-                Margin="9.2,9.2,9.4,9.4"
-                SelectionMode="Multiple"
-                VerticalAlignment="Stretch"
-                TextElement.FontSize="30">
-                <ListView.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="BorderThickness" Value="1" />
-                        <Setter Property="CornerRadius" Value="9. 9, 0, 0" />
-                    </Style>
-                </ListView.Resources>
-                <ListView.View>
-                    <GridView AllowsColumnReorder="True">
-                        <GridViewColumn Header="상벌점 내역" DisplayMemberBinding="{Binding ClassNumber}" Width="164"/>
-                    </GridView>
-                </ListView.View>
-            </ListView>
-        </Border>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="901" Margin="1491,118,0,0" VerticalAlignment="Top" Width="399" Background="White" CornerRadius="16">
-
-            <ListView x:Name="SearchList_Copy4"
-                Background="#ffffff"
-                Margin="9.2,9.2,9.4,483.2"
-                SelectionMode="Multiple"
-                VerticalAlignment="Stretch"
-                TextElement.FontSize="30">
-                <ListView.Resources>
-                    <Style TargetType="{x:Type Border}">
-                        <Setter Property="BorderThickness" Value="1" />
-                        <Setter Property="CornerRadius" Value="9. 9, 0, 0" />
-                    </Style>
-                </ListView.Resources>
-                <ListView.View>
-                    <GridView AllowsColumnReorder="True">
-                        <GridViewColumn Header="상점" DisplayMemberBinding="{Binding ClassNumber}" Width="164"/>
-                    </GridView>
-                </ListView.View>
-            </ListView>
-        </Border>
-        <ListView x:Name="SearchList_Copy3"
-            Background="#ffffff"
-            Margin="1511,606,23.6,103.4"
-            SelectionMode="Multiple"
-            VerticalAlignment="Stretch"
-            TextElement.FontSize="30">
-            <ListView.Resources>
-                <Style TargetType="{x:Type Border}">
-                    <Setter Property="BorderThickness" Value="1" />
-                    <Setter Property="CornerRadius" Value="9. 9, 0, 0" />
-                </Style>
-            </ListView.Resources>
-            <ListView.View>
-                <GridView AllowsColumnReorder="True">
-                    <GridViewColumn Header="벌점" DisplayMemberBinding="{Binding ClassNumber}" Width="164"/>
-                </GridView>
-            </ListView.View>
-        </ListView>
         <Button Content="상/벌점 추가" HorizontalAlignment="Left" Height="44" Margin="1630,959,0,0" VerticalAlignment="Top" Width="120" Foreground="#FF404040" x:Name="All_Select_Button_Copy" FontSize="20" BorderBrush="#FFB4B4B4" Background="White" Click="All_Grade_Click" FontFamily="NanumSquare" FontWeight="Bold">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">

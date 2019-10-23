@@ -26,3 +26,4 @@ C:\Users\user\Documents\GitHub\Admin\DMS\DMS\obj\Debug\DMS.Properties.Resources.
 C:\Users\user\Documents\GitHub\Admin\DMS\DMS\obj\Debug\DMS.csproj.GenerateResource.cache
 C:\Users\user\Documents\GitHub\Admin\DMS\DMS\obj\Debug\DMS.exe
 C:\Users\user\Documents\GitHub\Admin\DMS\DMS\obj\Debug\DMS.pdb
+C:\Users\user\Documents\GitHub\Admin\DMS\DMS\obj\Debug\View\Main_Window.g.cs
