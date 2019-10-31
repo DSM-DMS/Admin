@@ -1,0 +1,69 @@
+﻿<UserControl x:Class="DormitoryGUI.View.CustomSwitch"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DormitoryGUI.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="70" d:DesignWidth="200">
+    <UserControl.Resources>
+        <Style x:Key="SwitchToggleStyle" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border CornerRadius="35" 
+                                Background="White" 
+                                BorderThickness="10">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Border Grid.ColumnSpan="2"
+                Background="#675094"
+                BorderBrush="White"
+                BorderThickness="5"
+                CornerRadius="35"
+                Panel.ZIndex="0"/>
+        
+        <Label Grid.Column="0" 
+               Margin="10, 0, 0, 0"
+               HorizontalAlignment="Center" 
+               VerticalAlignment="Center" 
+               Foreground="White"
+               FontSize="20"
+               FontFamily="/Font/#NanumSquareRound Bold"
+               Content="상점" 
+               Panel.ZIndex="1"/>
+        
+        <Label Grid.Column="1" 
+               Margin="0, 0, 10, 0"
+               HorizontalAlignment="Center" 
+               VerticalAlignment="Center" 
+               Foreground="White"
+               FontSize="20"
+               FontFamily="/Font/#NanumSquareRound Bold"
+               Content="벌점" 
+               Panel.ZIndex="1"/>
+
+        <Button x:Name="SwitchToggle"
+                Grid.Column="1"
+                Cursor="Hand"
+                Click="SwitchToggle_Click"
+                Foreground="#675094"
+                FontFamily="/Font/#NanumSquareRound Bold"
+                FontSize="20"
+                Style="{StaticResource SwitchToggleStyle}"
+                Panel.ZIndex="2">
+            벌점
+        </Button>
+    </Grid>
+</UserControl>
